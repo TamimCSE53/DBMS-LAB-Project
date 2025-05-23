@@ -1,0 +1,34 @@
+php.ini -->
+
+[mail function]
+For Win32 only.
+http://php.net/smtp
+SMTP=smtp.gmail.com
+http://php.net/smtp-port
+smtp_port=587
+sendmail_from = your_email_address_here
+sendmail_path = "\"C:\xampp\sendmail\sendmail.exe\" -t"
+
+<-- php.ini
+
+Sendmail config -> 
+
+smtp_server=smtp.gmail.com
+smtp_port=587
+error_logfile=error.log
+debug_logfile=debug.log
+auth_username=your_email_address_here
+auth_password=your_password_here
+force_sender=your_email_address_here (it's optional)
+
+<- Sendmail config
+
+--> userform.sql
+-- phpMyAdmin SQL Dump
+-- version 5.1.0
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Mar 26, 2021 at 03:11 PM
+-- Server version: 10.4.18-MariaDB
+-- PHP Version: 8.0.3

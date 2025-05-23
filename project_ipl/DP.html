@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dynamic Programming Course</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="DP.css" />
+</head>
+<body>
+
+<header>
+  <a href="/home.php" class="logo">CP School</a>
+  <nav>
+    <ul>
+      <li><a href="#intro">Introduction</a></li>
+      <li><a href="#why">Why DP?</a></li>
+      <li><a href="#topics">Key Topics</a></li>
+      <li><a href="#course">Course Video</a></li>
+      <li><a href="#practice">Practice Problems</a></li>
+      <li><a href="#quiz">Quiz</a></li>
+      <li><a href="#videos">More Videos</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero" id="intro">
+  <div class="hero-content">
+    <h1>Dynamic Programming</h1>
+    <p>Master optimal substructure and overlapping subproblems through elegant algorithmic techniques!</p>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Introduction to Dynamic Programming</h2>
+  <p>Dynamic Programming (DP) is a powerful technique used to solve complex problems by breaking them down into simpler subproblems and storing the results of those subproblems to avoid redundant computations.</p>
+</section>
+
+<section class="section" id="why">
+  <h2>Why Learn Dynamic Programming?</h2>
+  <p>DP is a cornerstone of algorithmic problem solving. It's critical for tackling problems involving choices, constraints, and optimal solutions. In competitive programming and real-world applications, understanding DP can turn exponential-time algorithms into efficient, polynomial-time solutions.</p>
+</section>
+
+<section class="section" id="topics">
+  <h2>What You'll Learn</h2>
+  <ul class="topics-list">
+    <li>Memoization vs Tabulation</li>
+    <li>Fibonacci and Recursion Tree</li>
+    <li>Knapsack Variants</li>
+    <li>Coin Change Problems</li>
+    <li>Longest Increasing Subsequence</li>
+    <li>Matrix Chain Multiplication</li>
+    <li>Palindromic Partitioning</li>
+    <li>DP on Trees</li>
+    <li>Bitmask DP</li>
+  </ul>
+</section>
+
+<section class="section" id="course">
+  <div class="card">
+    <h3>Course Overview Video</h3>
+    <p>Get an overview of dynamic programming and its importance in algorithmic thinking.</p>
+    <a href="https://youtu.be/xeeo6nhq9IY?si=CACo0RHQsS1axk2j" class="btn" target="_blank">Watch Overview</a>
+  </div>
+</section>
+
+<section class="section" id="practice">
+  <div class="card">
+    <h3>Practice Problems</h3>
+    <p>Sharpen your skills with dynamic programming problems from top platforms like CSES and Codeforces.</p>
+    <a href="https://cses.fi/problemset/list/DP" class="btn" target="_blank">Solve on CSES (DP Problem Set)</a><br/>
+    <a href="https://codeforces.com/problemset?tags=dp" class="btn" target="_blank">Solve on Codeforces (DP tagged problems)</a><br/>
+    <a href="https://leetcode.com/tag/dynamic-programming/" class="btn" target="_blank">Solve on LeetCode</a><br/>
+    <a href="https://atcoder.jp/contests/dp/tasks" class="btn" target="_blank">Solve on AtCoder DP Contest</a>
+  </div>
+</section>
+
+
+<section class="section" id="quiz">
+  <h2>Quick Quiz</h2>
+  <div class="quiz-card">
+    <h3>Which of the following is NOT a characteristic of dynamic programming?</h3>
+    <form id="quizForm">
+      <label><input type="radio" name="question" value="a" /> Overlapping subproblems</label><br/>
+      <label><input type="radio" name="question" value="b" /> Optimal substructure</label><br/>
+      <label><input type="radio" name="question" value="c" /> Sorting input</label><br/>
+      <label><input type="radio" name="question" value="d" /> Memoization</label><br/>
+      <button type="submit" class="btn">Submit</button>
+    </form>
+    <div id="result"></div>
+  </div>
+</section>
+
+<section class="section" id="videos">
+  <h2>Dynamic Programming Video Series</h2>
+  <div class="videos">
+    <div class="video"><iframe src="https://www.youtube.com/embed/xeeo6nhq9IY" allowfullscreen></iframe><p>DP Overview</p></div>
+    <div class="video"><iframe src="https://www.youtube.com/embed/u7DdPBAJttU" allowfullscreen></iframe><p>Introduction to DP</p></div>
+    <div class="video"><iframe src="https://www.youtube.com/embed/mNrzyuus2h4" allowfullscreen></iframe><p>Longest Increasing Subsequence</p></div>
+    <div class="video"><iframe src="https://www.youtube.com/embed/PoTE56n_It8" allowfullscreen></iframe><p>Coin Change</p></div>
+    <div class="video"><iframe src="https://www.youtube.com/embed/o0NtrkItjws" allowfullscreen></iframe><p>Knapsack Problem</p></div>
+    <div class="video"><iframe src="https://www.youtube.com/embed/KnzlqtUDfIc" allowfullscreen></iframe><p>Rod Cutting</p></div>
+    <div class="video"><iframe src="https://www.youtube.com/embed/G46kdLkQ_Sw" allowfullscreen></iframe><p>Subset Sum</p></div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 CP School. All rights reserved.</p>
+</footer>
+
+<script>
+document.getElementById("quizForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+  const answer = document.querySelector('input[name="question"]:checked');
+  const result = document.getElementById("result");
+  if (answer) {
+    result.textContent = answer.value === "c" ? "✅ Correct! Sorting input isn't a characteristic of DP." : "❌ Incorrect. Try again!";
+  } else {
+    result.textContent = "Please select an answer!";
+  }
+});
+  fetch("store_visit.php", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: `page=${encodeURIComponent(window.location.pathname)}`
+  });
+
+</script>
+
+</body>
+</html>

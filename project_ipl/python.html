@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Python Mastery Hub</title>
+  <link rel="stylesheet" href="python.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    .quiz-result {
+      margin-top: 1rem;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <a href="/home.php" class="logo">CP School</a>
+    <ul class="nav-links">
+      <li><a href="#videos">Videos</a></li>
+      <li><a href="#topics">Topics</a></li>
+      <li><a href="#progress">Progress</a></li>
+      <li><a href="#practice">Practice</a></li>
+      <li><a href="#quiz">Quiz</a></li>
+      <li><a href="#resources">Resources</a></li>
+    </ul>
+    <div class="nav-icons">
+      <i class="fas fa-moon toggle-theme" title="Toggle Theme"></i>
+      <i class="fas fa-user-circle user-icon" title="User"></i>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="container">
+      <h2>Welcome to Python Mastery Hub</h2>
+      <p>Master Python programming with expert-led tutorials and interactive exercises.</p>
+      <a href="#videos" class="btn">Get Started</a>
+    </div>
+  </section>
+
+  <section id="videos" class="section">
+    <div class="container">
+      <h2 class="section-title">Video Lectures</h2>
+      <div class="video-grid">
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/_uQrJ0TkZlc" frameborder="0" allowfullscreen></iframe>
+          <h3>Python for Beginners</h3>
+        </div>
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/rfscVS0vtbw" frameborder="0" allowfullscreen></iframe>
+          <h3>Python Full Course</h3>
+        </div>
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/WGJJIrtnfpk" frameborder="0" allowfullscreen></iframe>
+          <h3>Python Crash Course</h3>
+        </div>
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/kqtD5dpn9C8" frameborder="0" allowfullscreen></iframe>
+          <h3>Python in One Video</h3>
+        </div>
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/f79MRyMsjrQ" frameborder="0" allowfullscreen></iframe>
+          <h3>Intermediate Python</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="topics" class="section bg-light">
+    <div class="container">
+      <h2 class="section-title">Topics Covered</h2>
+      <ul class="topics-list">
+        <li>Variables and Data Types</li>
+        <li>Control Structures</li>
+        <li>Loops</li>
+        <li>Functions</li>
+        <li>Lists and Tuples</li>
+        <li>Dictionaries</li>
+        <li>Object-Oriented Programming</li>
+        <li>Modules and Packages</li>
+        <li>File Handling</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="progress" class="section">
+    <div class="container">
+      <h2 class="section-title">Your Progress</h2>
+      <div class="progress-container">
+        <div class="progress-bar">
+          <span class="progress-label">Course Completion</span>
+          <div class="progress">
+            <div class="progress-fill" style="width: 30%;"></div>
+          </div>
+          <span class="progress-percentage">30%</span>
+        </div>
+        <div class="progress-bar">
+          <span class="progress-label">Videos Watched</span>
+          <div class="progress">
+            <div class="progress-fill" style="width: 50%;"></div>
+          </div>
+          <span class="progress-percentage">50%</span>
+        </div>
+        <div class="progress-bar">
+          <span class="progress-label">Practice Completed</span>
+          <div class="progress">
+            <div class="progress-fill" style="width: 20%;"></div>
+          </div>
+          <span class="progress-percentage">20%</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="practice" class="section bg-light">
+    <div class="container">
+      <h2 class="section-title">Practice Problems</h2>
+      <div class="practice-list">
+        <div class="practice-item">
+          <h3>Problem 1: Reverse a String</h3>
+          <p>Write a Python program to reverse a given string.</p>
+        </div>
+        <div class="practice-item">
+          <h3>Problem 2: Check Palindrome</h3>
+          <p>Determine whether an input string is a palindrome.</p>
+        </div>
+        <div class="practice-item">
+          <h3>Problem 3: Sum of List</h3>
+          <p>Calculate the sum of elements in a list.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="quiz" class="section">
+    <div class="container">
+      <h2 class="section-title">Fun Quiz</h2>
+      <div class="quiz">
+        <p><strong>Question:</strong> What is the output of the following Python code?</p>
+        <pre>
+x = 5
+print(x + x)
+        </pre>
+        <ul class="quiz-options">
+          <li><input type="radio" name="q1" id="opt1"><label for="opt1">10</label></li>
+          <li><input type="radio" name="q1" id="opt2"><label for="opt2">55</label></li>
+          <li><input type="radio" name="q1" id="opt3"><label for="opt3">5</label></li>
+          <li><input type="radio" name="q1" id="opt4"><label for="opt4">Error</label></li>
+        </ul>
+        <button class="btn" onclick="checkAnswer()">Submit Answer</button>
+        <p id="quiz-result" class="quiz-result"></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="resources" class="section bg-light">
+    <div class="container">
+      <h2 class="section-title">Resources</h2>
+      <ul class="resources-list">
+        <li><a href="#">Download Python Guide PDF</a></li>
+        <li><a href="#">Python Official Docs</a></li>
+        <li><a href="#">Python Cheat Sheet</a></li>
+        <li><a href="#">Recommended Books</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Python Mastery Hub. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    function checkAnswer() {
+      const correctAnswer = "opt1";
+      const options = document.getElementsByName("q1");
+      let selected = null;
+
+      for (const opt of options) {
+        if (opt.checked) {
+          selected = opt.id;
+          break;
+        }
+      }
+
+      const result = document.getElementById("quiz-result");
+      if (!selected) {
+        result.textContent = "Please select an answer.";
+        result.style.color = "orange";
+      } else if (selected === correctAnswer) {
+        result.textContent = "Correct! Well done.";
+        result.style.color = "green";
+      } else {
+        result.textContent = "Incorrect. The correct answer is: 10";
+        result.style.color = "red";
+      }
+    }
+    fetch("store_visit.php", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: `page=${encodeURIComponent(window.location.pathname)}`
+    });
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Go Mastery Hub</title>
+  <link rel="stylesheet" href="Go.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    .quiz-result {
+      margin-top: 1rem;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <a href="/home.php" class="logo">CP School</a>
+    <ul class="nav-links">
+      <li><a href="#videos">Videos</a></li>
+      <li><a href="#topics">Topics</a></li>
+      <li><a href="#progress">Progress</a></li>
+      <li><a href="#practice">Practice</a></li>
+      <li><a href="#quiz">Quiz</a></li>
+      <li><a href="#resources">Resources</a></li>
+    </ul>
+    <div class="nav-icons">
+      <i class="fas fa-moon toggle-theme" title="Toggle Theme"></i>
+      <i class="fas fa-user-circle user-icon" title="User"></i>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="container">
+      <h2>Welcome to Go Mastery Hub</h2>
+      <p>Master the Go programming language with tutorials, practice problems, and interactive tools.</p>
+      <a href="#videos" class="btn">Get Started</a>
+    </div>
+  </section>
+
+  <section id="videos" class="section">
+    <div class="container">
+      <h2 class="section-title">Video Lectures</h2>
+      <div class="video-grid">
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/-ULC_rrdscM?si=AYykNTmEYjmRHrNE" frameborder="0" allowfullscreen></iframe>
+          <h3>Learn Go Programming</h3>
+        </div>
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/BMP5VujjDIc?si=RrCP-WTCNQf4zxRG" frameborder="0" allowfullscreen></iframe>
+          <h3>Go Full Course</h3>
+        </div>
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/gi_ooUU_X3U?si=cMuKEbcliZY7GbHC" frameborder="0" allowfullscreen></iframe>
+          <h3>Go Basics</h3>
+        </div>
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/NGDEXEpthZ4?si=wfwuIhJkv0dnVoP6" frameborder="0" allowfullscreen></iframe>
+          <h3>Structs and Interfaces</h3>
+        </div>
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/f7WvTIAniro?si=sGXFd0bFvS0y5e7e" frameborder="0" allowfullscreen></iframe>
+          <h3>Go Concurrency</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="topics" class="section bg-light">
+    <div class="container">
+      <h2 class="section-title">Topics Covered</h2>
+      <ul class="topics-list">
+        <li>Variables and Constants</li>
+        <li>Control Structures</li>
+        <li>Functions</li>
+        <li>Arrays and Slices</li>
+        <li>Maps</li>
+        <li>Structs and Interfaces</li>
+        <li>Concurrency (goroutines, channels)</li>
+        <li>Error Handling</li>
+        <li>File I/O</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="progress" class="section">
+    <div class="container">
+      <h2 class="section-title">Your Progress</h2>
+      <div class="progress-container">
+        <div class="progress-bar">
+          <span class="progress-label">Course Completion</span>
+          <div class="progress">
+            <div class="progress-fill" style="width: 30%;"></div>
+          </div>
+          <span class="progress-percentage">30%</span>
+        </div>
+        <div class="progress-bar">
+          <span class="progress-label">Videos Watched</span>
+          <div class="progress">
+            <div class="progress-fill" style="width: 50%;"></div>
+          </div>
+          <span class="progress-percentage">50%</span>
+        </div>
+        <div class="progress-bar">
+          <span class="progress-label">Practice Completed</span>
+          <div class="progress">
+            <div class="progress-fill" style="width: 20%;"></div>
+          </div>
+          <span class="progress-percentage">20%</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="practice" class="section bg-light">
+    <div class="container">
+      <h2 class="section-title">Practice Problems</h2>
+      <div class="practice-list">
+        <div class="practice-item">
+          <h3>Problem 1: Reverse a String</h3>
+          <p>Write a Go program to reverse a given string using a slice.</p>
+        </div>
+        <div class="practice-item">
+          <h3>Problem 2: Fibonacci Series</h3>
+          <p>Generate the first N numbers of the Fibonacci series.</p>
+        </div>
+        <div class="practice-item">
+          <h3>Problem 3: Word Frequency</h3>
+          <p>Read a file and print the frequency of each word.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="quiz" class="section">
+    <div class="container">
+      <h2 class="section-title">Fun Quiz</h2>
+      <div class="quiz">
+        <p><strong>Question:</strong> What does this Go code print?</p>
+        <pre>
+package main
+import "fmt"
+
+func main() {
+  a := []int{1, 2, 3}
+  fmt.Println(a[1:])
+}
+        </pre>
+        <ul class="quiz-options">
+          <li><input type="radio" name="q1" id="opt1"><label for="opt1">[1]</label></li>
+          <li><input type="radio" name="q1" id="opt2"><label for="opt2">[2 3]</label></li>
+          <li><input type="radio" name="q1" id="opt3"><label for="opt3">[1 2 3]</label></li>
+          <li><input type="radio" name="q1" id="opt4"><label for="opt4">Error</label></li>
+        </ul>
+        <button class="btn" onclick="checkAnswer()">Submit Answer</button>
+        <p id="quiz-result" class="quiz-result"></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="resources" class="section bg-light">
+    <div class="container">
+      <h2 class="section-title">Resources</h2>
+      <ul class="resources-list">
+        <li><a href="#">Download Go Language PDF</a></li>
+        <li><a href="#">Go Official Documentation</a></li>
+        <li><a href="#">Go Cheat Sheet</a></li>
+        <li><a href="#">Recommended Books</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Go Mastery Hub. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    function checkAnswer() {
+      const correctAnswer = "opt2";
+      const options = document.getElementsByName("q1");
+      let selected = null;
+
+      for (const opt of options) {
+        if (opt.checked) {
+          selected = opt.id;
+          break;
+        }
+      }
+
+      const result = document.getElementById("quiz-result");
+      if (!selected) {
+        result.textContent = "Please select an answer.";
+        result.style.color = "orange";
+      } else if (selected === correctAnswer) {
+        result.textContent = "Correct! Well done.";
+        result.style.color = "green";
+      } else {
+        result.textContent = "Incorrect. The correct answer is: [2 3]";
+        result.style.color = "red";
+      }
+    }
+    fetch("store_visit.php", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: `page=${encodeURIComponent(window.location.pathname)}`
+    });
+
+  </script>
+</body>
+</html>
